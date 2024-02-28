@@ -1,0 +1,648 @@
+
+
+
+Nav ul{
+    font-size: large;
+}
+
+
+.jumbotron #aboutus{
+    background-color: aliceblue;
+    
+    align-content: center;
+    padding-top:20px ;
+    padding-bottom: 2%;
+}
+
+.jumbotron button{
+    padding: top 10px;;
+}
+
+.jumbotron .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: aliceblue;
+    border-color: #285e8e;    
+    color:black;
+}
+/* 
+#Achievements{
+    background-color: aliceblue;
+    
+    
+} */
+
+
+#News{
+    background: #e0dddd;
+    width: 100%;}
+.news-scroll a{text-decoration: none;
+}
+.dot{height: 6px;width: 20%;margin-left: 3px;margin-right: 3px;margin-top: 2px !important;background-color: rgb(207,23,23);border-radius: 50%;display: inline-block}
+
+div #btn1{
+    padding-right: 1%;
+}
+
+
+div .card .img-fluid{
+    height:300px;
+}
+
+div #facultycont{
+    padding-top: 2%;
+}
+
+div #facultycards{
+    width: 18rem;
+    
+}
+
+
+div #Facultycardbody{
+    background-color:rgb(180, 180, 180);
+    
+}
+
+@media screen and (max-width: 900px) {
+    div #facultycont{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    div #fcard{
+
+        padding-top: 4%;
+    }
+  }
+
+
+
+ #facilitiesheading{
+    text-align:center;
+    background-color:rgb(102, 0, 0); 
+    color:white;padding-top:10px;
+    padding-bottom:10px;
+ } 
+
+
+
+ #portfolio{
+    width:auto;
+ }
+
+
+ .content{
+    background-color: white;
+    padding: 10px;
+ }
+ 
+
+div #coach{
+    padding-top:2%;
+}
+ div #Coach{
+    width: 14rem;
+ }
+
+ div #Coachcol{
+    padding-top: 4%;
+    padding-right:2% ;
+ }
+
+ #Coaches{
+    background-color: aliceblue;
+    
+    
+}
+
+
+@media screen and (max-width: 556px) {
+   
+    div #Coachcol{
+        margin-left: 18%;
+        margin-right: 18%;
+        width: auto;
+
+     }
+
+
+
+  }
+
+  #morebtn{
+  
+    
+    padding-bottom: 2%;
+  }
+
+
+
+  #Facilities{
+    background-color: aliceblue;
+    padding-top:20px ;
+    padding-bottom: 2%;
+    margin-top: 5%;
+}
+
+
+#Facilitiescard{
+    width:18rem;
+}
+  
+
+
+
+#facilitiesimg {
+    position: relative;
+    width: 50%;
+  }
+  
+  #image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  #overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  #facilitiesimg:hover #overlay {
+    opacity: 1;
+  }
+  
+  #text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+  #sportbtn{
+    padding-top: 2%;
+
+  }
+
+
+
+  img #coache{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+  }
+
+
+  .flip-card {
+    
+    background-color: transparent;
+    
+    width: 200px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+
+ div #coaches{
+    padding-top: 3%;
+ }
+
+ div #coachs{
+  padding-top: 5%;
+  border-radius: 50%;
+ }
+
+ div #coachbtn{
+  padding-top: 5%;
+ }
+
+
+/* 
+
+ .container-fluid{
+  background-color: blanchedalmond;
+  position:relative;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ 
+ 
+ text-align: center;
+} */
+#upperimage {
+  position: relative;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+
+  width:100% ; 
+  height:420px;
+}
+#centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#card-img-top{
+  width: auto;
+  height:240px
+}
+
+#achieve{
+  position: relative;
+      text-align: center;
+      color: white;
+}
+
+#background{
+    width: 100%;
+      
+    
+ 
+}
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:4rem;
+}
+
+
+#synthetic{
+  width: 100%;
+  height: 500px;
+}
+#centeredabout{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:aliceblue;
+  font-family: 'Bruno Ace SC', cursive;
+  font-size: 121px;
+}
+#description{
+  margin-top: 50px;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  background-color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 50px;
+}
+#photo_track{
+  width: 500px;
+  height: 200px;
+  
+  border: 1px;
+  border-radius: 4%;
+}
+#photo_ground{
+  width: 500px;
+  border: 1px;
+  border-radius: 4%;
+}
+#photo_boyz{
+  width: 500px;
+  border: 1px;
+  border-radius: 4%;
+}
+#photo_thpp{
+  width: 500px;
+  border: 1px;
+  border-radius: 4%;
+}
+#msg{
+  width: 500px;
+  border: 2px;
+  border-radius: 4%;
+}
+#admin_msg{
+  font-size: 22px;
+}
+#mcbc{
+  border: 2px;
+  background-color: darkcyan;
+  color: whitesmoke;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+#facilities{
+margin-top: 5%;
+margin-left: 2%;
+margin-right: 2%;
+text-align: left;
+}
+
+#facheading{
+  text-align: left;
+  margin-top:4%;
+  margin-left: 3%;
+}
+
+.table{
+text-align: left;
+margin-top: 3%;
+
+}
+
+#Login{
+background-color: #508bfc;
+}
+#logincard{
+  border-radius: 1rem;
+}
+
+.tab-content {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+/* Style the vertical tabs */
+.vertical-tabs {
+  border: 1px solid #ddd;
+}
+.vertical-tabs .nav-tabs {
+  border: none;
+}
+.vertical-tabs .nav-tabs li {
+  margin-bottom: 15px;
+}
+.vertical-tabs .nav-tabs li:last-child {
+  margin-bottom: 0;
+}
+.vertical-tabs .nav-tabs li a {
+  padding: 10px 15px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+.vertical-tabs .nav-tabs li a:hover {
+  background-color: #ddd;
+}
+.vertical-tabs .nav-tabs li.active a {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-right-color: transparent;
+  color: #333;
+
+}
+.vertical-tabs .tab-pane {
+  display: none;
+}
+.vertical-tabs .tab-pane.active {
+  display: block;
+}
+
+
+
+/* Style for container */
+div #vercontainer {
+  padding-top: 50px;
+}
+
+/* Style for nav-pills */
+.nav-pills {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.nav-pills .nav-link {
+  color: #343a40;
+  border-radius: 10px;
+}
+
+/* Style for content */
+div #vercontent {
+  margin-top: 10px;
+ 
+}
+
+#vercontent img {
+  display: block;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-bottom: 5%;
+  height: 100%;
+  max-width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+div #vercontent p {
+
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  
+  
+}
+
+div #vercontent .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  
+  
+}
+
+div #vercontent .btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+#facilitiesh{
+  margin-top: 5%;
+}
+
+
+.welcome {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.welcome h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.col {
+  width: calc(25% - 10px);
+}
+
+.col img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+#aboutbtn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #f2f2f2;
+  color: #131313;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  border-color: red;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+#achievements {
+  background-color: #f8f9fa;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#achievements h2 {
+  font-size: 32px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+#achcard {
+  border: none;
+  width: auto;
+  height: auto;
+}
+
+#achcard .card-img-top {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
+}
+
+#ach-card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+#achbtn{
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #f2f2f2;
+  color: #131313;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  border-color: red;
+  border-radius: 10px;
+}
+
+#achbtn-primary:hover, #achbtn-primary:focus {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+
+
+
+ .details{
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/29/03/27/track-and-field-1867053_960_720.jpg");
+  color: white;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+ #topbar1{
+  background-color: rgb(239, 80, 80);
+ }
