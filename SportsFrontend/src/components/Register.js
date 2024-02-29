@@ -1,13 +1,10 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { signUp } from "../services/auth";
-import { useState } from "react";
 import "./CSS/Login.css";
 import axios from "axios";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { toast } from "react-toastify";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 <ToastContainer

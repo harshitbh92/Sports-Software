@@ -144,6 +144,7 @@ function Login() {
         <h3>Login</h3>
         <input
           className="form-control"
+          id="email"
           type="email"
           name="email"
           placeholder="Email"
@@ -173,6 +174,7 @@ function Login() {
 
         <input
           className="form-control"
+          id="password"
           type="password"
           name="password"
           placeholder="Password"
@@ -204,15 +206,15 @@ function Login() {
         value={password}
         onChange={handlePasswordChange}
       /> */}
-        <div>
+        {/* <div>
           <input
             type="checkbox"
             id="show-password"
             onChange={handleShowPassword}
           />
           <label htmlFor="show-password">Show password</label>
-        </div>
-        <button type="submit">Login</button>
+        </div> */}
+        <button id="submit">Login</button>
         {/* {error && <p className="error">{error}</p>} */}
         <p>
           Create a new account <Link to="/register">Register</Link>
