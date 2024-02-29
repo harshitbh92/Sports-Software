@@ -162,7 +162,7 @@ function Login() {
         <input
           className="form-control"
           type="number"
-          name="rollNo"
+          name="rollno"
           placeholder="Roll No"
           value={formik.values.rollNo}
           onChange={formik.handleChange("rollNo")}
@@ -217,7 +217,10 @@ function Login() {
         <button id="submit">Login</button>
         {/* {error && <p className="error">{error}</p>} */}
         <p>
-          Create a new account <Link to="/register">Register</Link>
+          Create a new account{" "}
+          <Link id="register" to="/register">
+            Register
+          </Link>
         </p>
       </form>
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />

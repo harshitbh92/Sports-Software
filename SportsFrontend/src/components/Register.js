@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./CSS/Login.css";
 import axios from "axios";
@@ -42,6 +42,8 @@ const initialValues = {
 };
 
 function Register() {
+  const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
   // const notify = () => toast("User Registered Successfully!!");
 
@@ -49,6 +51,8 @@ function Register() {
     initialValues,
     validationSchema: SignUpSchema,
     onSubmit: (values) => {
+      setLoading(true); // Set loading state when registration starts
+
       axios
         .post("http://localhost:5000/api/user/register", values)
         .then((result) => {
@@ -62,6 +66,9 @@ function Register() {
         .catch((error) => {
           toast.error(error.message || "An error occurred");
           console.error(error);
+        })
+        .finally(() => {
+          setLoading(false); // Reset loading state when registration completes
         });
     },
   });
@@ -74,6 +81,7 @@ function Register() {
           className="form-control"
           type="text"
           name="name"
+          id="name"
           placeholder="Enter Full Name"
           value={formik.values.name}
           onChange={formik.handleChange("name")}
@@ -85,6 +93,7 @@ function Register() {
           className="form-control"
           type="email"
           name="email"
+          id="email"
           placeholder="Email"
           value={formik.values.email}
           onChange={formik.handleChange("email")}
@@ -97,6 +106,7 @@ function Register() {
           className="form-control"
           type="number"
           name="rollNo"
+          id="rollno"
           placeholder="Roll No"
           value={formik.values.rollNo}
           onChange={formik.handleChange("rollNo")}
@@ -108,6 +118,7 @@ function Register() {
         <input
           className="form-control"
           type="tel"
+          id="phonenumber"
           name="phoneNumber"
           placeholder="Phone Number"
           value={formik.values.phoneNumber}
@@ -122,6 +133,7 @@ function Register() {
           className="form-control"
           type="password"
           name="password"
+          id="password"
           placeholder="Password"
           value={formik.values.password}
           onChange={formik.handleChange("password")}
@@ -131,45 +143,30 @@ function Register() {
           {formik.touched.password && formik.errors.password}
         </div>
 
-        <input
-          className="form-control"
-          type="password"
-          name="confirmPassword"
-          placeholder="Password"
-          value={formik.values.confirmPassword}
-          onChange={formik.handleChange("confirmPassword")}
-          onBlur={formik.handleBlur("confirmPassword")}
-        />
-        <div className="error">
-          {formik.touched.confirmPassword && formik.errors.confirmPassword}
+        <div>
+          <input
+            className="form-control"
+            type="password"
+            id="confirmpassword"
+            name="confirmPassword"
+            placeholder="Password"
+            value={formik.values.confirmPassword}
+            onChange={formik.handleChange("confirmPassword")}
+            onBlur={formik.handleBlur("confirmPassword")}
+          />
+          <div className="error">
+            {formik.touched.confirmPassword && formik.errors.confirmPassword}
+          </div>
         </div>
-        {/* <input type='text' placeholder='Enter Your Name' name='name' value={formik.values.name} onChange={formik.handleChange("name")} />
-      <input type='email' placeholder='Email...' value={email} onChange={handleEmailChange} />
-      <input
-        type='number'
-        placeholder='Phone Number'
-        value={phoneNumber}
-        onChange={handlePhoneNumberChange}
-      />
-      <input type='number' placeholder='TIET Roll No' value={rollNo} onChange={handleRollNoChange} />
-      <input
-        type={showPassword ? 'text' : 'password'}
-        placeholder='Password...'
-        value={password}
-        onChange={handlePasswordChange}
-      />
-      <input
-        type={showPassword ? 'text' : 'password'}
-        placeholder='Confirm password...'
-        value={confirmPassword}
-        onChange={handleConfirmPasswordChange}
-      />
-      <div>
-        <input type='checkbox' id='show-password' onChange={handleShowPassword} />
-        <label htmlFor='show-password'>Show password</label>
-      </div> */}
-        <button type="submit">Register</button>
-        {/* {error && <p className="error">{error}</p>} */}
+
+        <button
+          id="registersubmit"
+          disabled={loading}
+          className="border bg-[#4CAF50] text-white rounded-sm"
+        >
+          {loading ? "Registering..." : "Register"}
+        </button>
+
         <p>
           Already have an account? <Link to="/login">Login</Link>
         </p>
