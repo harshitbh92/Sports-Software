@@ -176,7 +176,8 @@ function Login() {
   return (
     <form className="login-form" onSubmit={formik.handleSubmit}>
       <h3>Login</h3>
-      <input className='form-control' type='email' name='email'
+      <input className='form-control' type='email' name='email' 
+      id ='email'
         placeholder='Email' value={formik.values.email}
         onChange={formik.handleChange("email")}
         onBlur={formik.handleBlur("email")} />
@@ -188,6 +189,7 @@ function Login() {
       <br />
 
       <input className='form-control' type='number' name='rollNo'
+      id = 'rollNo'
         placeholder='Roll No' value={formik.values.rollNo}
         onChange={formik.handleChange("rollNo")}
         onBlur={formik.handleBlur("rollNo")} />
@@ -196,6 +198,7 @@ function Login() {
       </div>
 
       <input className='form-control' type='password' name='password'
+      id = 'password'
         placeholder='Password' value={formik.values.password}
         onChange={formik.handleChange("password")}
         onBlur={formik.handleBlur("password")} />
@@ -231,7 +234,7 @@ function Login() {
         />
         <label htmlFor="show-password">Show password</label>
       </div>
-      <button type="submit">Login</button>
+      <button id='login-button' type="submit">Login</button>
       {/* {error && <p className="error">{error}</p>} */}
       <p>
         Create a new account <Link to="/register">Register</Link>

@@ -65,6 +65,7 @@ function Register() {
     <form className='login-form' onSubmit={formik.handleSubmit}>
       <h3>Register</h3>
       <input className='form-control' type='text' name='name'
+      id='name'
         placeholder='Enter Full Name'
         value={formik.values.name}
         onChange={formik.handleChange("name")}
@@ -74,6 +75,7 @@ function Register() {
       </div>
 
       <input className='form-control' type='email' name='email'
+      id='email'
         placeholder='Email' value={formik.values.email}
         onChange={formik.handleChange("email")}
         onBlur={formik.handleBlur("email")} />
@@ -81,6 +83,7 @@ function Register() {
         {formik.touched.email && formik.errors.email}
       </div>
       <input className='form-control' type='number' name='rollNo'
+      id='rollNo'
         placeholder='Roll No' value={formik.values.rollNo}
         onChange={formik.handleChange("rollNo")}
         onBlur={formik.handleBlur("rollNo")} />
@@ -88,6 +91,7 @@ function Register() {
         {formik.touched.rollNo && formik.errors.rollNo}
       </div>
       <input className='form-control' type='tel' name='phoneNumber'
+      id='phoneNumber'
         placeholder='Phone Number' value={formik.values.phoneNumber}
         onChange={formik.handleChange("phoneNumber")}
         onBlur={formik.handleBlur("phoneNumber")} />
@@ -100,6 +104,7 @@ function Register() {
       
 
       <input className='form-control' type='password' name='password'
+      id='password'
         placeholder='Password' value={formik.values.password}
         onChange={formik.handleChange("password")}
         onBlur={formik.handleBlur("password")} />
@@ -108,6 +113,7 @@ function Register() {
       </div>
 
       <input className='form-control' type='password' name='confirmPassword'
+      id='confirmPassword'
         placeholder='Password' value={formik.values.confirmPassword}
         onChange={formik.handleChange("confirmPassword")}
         onBlur={formik.handleBlur("confirmPassword")} />
@@ -139,7 +145,7 @@ function Register() {
         <input type='checkbox' id='show-password' onChange={handleShowPassword} />
         <label htmlFor='show-password'>Show password</label>
       </div> */}
-      <button type='submit'>Register</button>
+      <button id='register-button' type='submit'>Register</button>
       {/* {error && <p className="error">{error}</p>} */}
       <p>
         Already have an account? <Link to="/login">Login</Link>
