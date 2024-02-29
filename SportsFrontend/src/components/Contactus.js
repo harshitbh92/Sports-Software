@@ -16,15 +16,19 @@ export default function Contactus() {
   <form>
 
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your name" required />
+    <input type="text" id="name" name="name"  placeholder="Your name" required />
     
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Your email" required />
+
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your Mobile" required />
     
     <label for="message">Message:</label>
     <textarea id="message" name="message" placeholder="Enter your message here" required ></textarea>
     
-    <button type="submit">Submit</button>
+    <button id='contact-submit' type="submit">Submit</button>
 
   </form>
   </div>

@@ -6,40 +6,48 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { signUp } from '../services/auth';
+import { useState } from 'react';
+import './CSS/Login.css';
+import axios from 'axios';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+import { toast } from "react-toastify";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 <ToastContainer
-  position="top-right"
-  autoClose={5000}
-  hideProgressBar={false}
-  newestOnTop={false}
-  closeOnClick
-  rtl={false}
-  pauseOnFocusLoss
-  draggable
-  pauseOnHover
-  theme="light"
-/>;
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 
 const SignUpSchema = yup.object({
   name: yup.string().required("First Name is required"),
-  email: yup
-    .string()
-    .email("Valid email must be provided")
-    .required("Email address is required"),
+  email: yup.string().email("Valid email must be provided").required("Email address is required"),
   rollNo: yup.string().required("Roll No is required"),
   phoneNumber: yup.string().required("Mobile Number is required"),
   password: yup.string().required("Password is required"),
-  confirmPassword: yup.string().required("Password is to be confirmed"),
+  confirmPassword: yup.string().required("Password is to be confirmed")
 });
 
 const initialValues = {
-  name: "",
-  email: "",
-  rollNo: "",
-  phoneNumber: "",
-  password: "",
-  confirmPassword: "",
-};
+  name: '',
+  email: '',
+  rollNo: '',
+  phoneNumber: '',
+  password: '',
+  confirmPassword: ''
+}
 
 function Register() {
   const [loading, setLoading] = useState(false);
@@ -175,5 +183,6 @@ function Register() {
     </div>
   );
 }
+
 
 export default Register;

@@ -11,12 +11,14 @@ const dbConnect = require('./config/dbConnect');
 app.use(cors());
 
 const userRouter = require("./routes/userRoute");
+const QueryRouter = require("./routes/QueryRoute");
 
 dbConnect();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
 app.use("/api/user", userRouter);
+app.use("/api/query",QueryRouter);
 
 app.listen(PORT, ()=>{
     console.log(`Server running at port ${PORT}`);

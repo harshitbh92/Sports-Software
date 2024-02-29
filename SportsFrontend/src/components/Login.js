@@ -1,4 +1,4 @@
-// //
+// // 
 // import { useState } from "react";
 // import "./CSS/Login.css";
 // import { Link } from "react-router-dom";
@@ -88,13 +88,15 @@
 // Login.js
 
 import { useState } from "react";
-import "./CSS/Login.css";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { useFormik } from "formik";
-import * as yup from "yup";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import "./CSS/Login.css"
+import { Link, useNavigate } from 'react-router-dom';
+import { signIn } from "../services/auth";
+import axios from 'axios';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+import { toast } from "react-toastify";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const loginSchema = yup.object({
   email: yup.string().email("Valid email must be provided"),
@@ -103,38 +105,71 @@ const loginSchema = yup.object({
 });
 
 const initialValues = {
-  email: "",
-  rollNo: "",
-  password: "",
-};
+  email: '',
+  rollNo: '',
+  password: '',
+}
+
 
 function Login() {
+  // const [email, setEmail] = useState("");
+  // const [rollNo,setRollNo] = useState("");
+  // const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  // const [error, setError] = useState("");
+
+  // const handleEmailChange = (event) => {
+  //   setEmail(event.target.value);
+  // };
+
+  // const handleRollNoChange = (event) => {
+  //   setRollNo(event.target.value);
+  // }
+
+  // const handlePasswordChange = (event) => {
+  //   setPassword(event.target.value);
+  // };
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
+  // const handleLogin = async (event) => {
+  //   event.preventDefault();
+  //   if (email === "" || password === "" || rollNo === "") {
+  //     setError("Please enter email, roll number and password");
+  //   } else {
+  //     setError("");
+  //     try {
+  //       const userExists = await signIn(email, rollNo, password);
+  //       console.log(userExists);
+  //       if (userExists) {
+  //         window.location.href = "/dashboard";
+             
+  //       } else {
+  //         setError("User does not exist");
+  //       }
+
+        
+  //     } catch (error) {
+  //       setError(error.message);
+  //     }
+  //   }
+  // };
   const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues,
     validationSchema: loginSchema,
     onSubmit: (values) => {
-      axios
-        .post("http://localhost:5000/api/user/login", values)
-        .then((result) => {
-          toast.success("User Logged In Successfully!!");
-          console.log(result);
-
-          setTimeout(() => {
-            navigate("/dashboard");
-          }, 2000);
+      axios.post('http://localhost:5000/api/user/login', values)
+        .then(result => {
+          console.log(result)
+          toast.info("User Logged In Successfully!!");
+          
+          navigate('/dashboard')
         })
-        .catch((error) => {
-          toast.error(error.message || "An error occurred");
-          console.error(error);
-        });
+        .catch(error => console.log(error))
     },
   });
 
@@ -229,3 +264,4 @@ function Login() {
 }
 
 export default Login;
+
