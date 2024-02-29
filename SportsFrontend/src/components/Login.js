@@ -90,10 +90,12 @@
 import { useState } from "react";
 import "./CSS/Login.css";
 import { Link, useNavigate } from "react-router-dom";
+import { signIn } from "../services/auth";
 import axios from "axios";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const loginSchema = yup.object({
@@ -109,12 +111,49 @@ const initialValues = {
 };
 
 function Login() {
+  // const [email, setEmail] = useState("");
+  // const [rollNo,setRollNo] = useState("");
+  // const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  // const [error, setError] = useState("");
+
+  // const handleEmailChange = (event) => {
+  //   setEmail(event.target.value);
+  // };
+
+  // const handleRollNoChange = (event) => {
+  //   setRollNo(event.target.value);
+  // }
+
+  // const handlePasswordChange = (event) => {
+  //   setPassword(event.target.value);
+  // };
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
+  // const handleLogin = async (event) => {
+  //   event.preventDefault();
+  //   if (email === "" || password === "" || rollNo === "") {
+  //     setError("Please enter email, roll number and password");
+  //   } else {
+  //     setError("");
+  //     try {
+  //       const userExists = await signIn(email, rollNo, password);
+  //       console.log(userExists);
+  //       if (userExists) {
+  //         window.location.href = "/dashboard";
+
+  //       } else {
+  //         setError("User does not exist");
+  //       }
+
+  //     } catch (error) {
+  //       setError(error.message);
+  //     }
+  //   }
+  // };
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -124,17 +163,12 @@ function Login() {
       axios
         .post("http://localhost:5000/api/user/login", values)
         .then((result) => {
-          toast.success("User Logged In Successfully!!");
           console.log(result);
+          toast.info("User Logged In Successfully!!");
 
-          setTimeout(() => {
-            navigate("/dashboard");
-          }, 2000);
+          navigate("/dashboard");
         })
-        .catch((error) => {
-          toast.error(error.message || "An error occurred");
-          console.error(error);
-        });
+        .catch((error) => console.log(error));
     },
   });
 
