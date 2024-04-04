@@ -1,10 +1,19 @@
 # Sports-Software
 
-This is a sample application that demonstrates an E-commerce website using the MERN stack. The application loads 
-products a MongoDB database and displays them. Users can select to display products in a single category. Users can 
-click on any product to get more information including pricing, reviews and rating. Users can select items and 
-add them to their shopping cart
+ Our platform offers a comprehensive solution for all your sporting needs, from booking equipment to exploring facilities, viewing scores, and celebrating player achievements. Whether you're a student athlete, coach, or sports enthusiast, our website provides a seamless experience tailored to enhance your sporting journey.
 
+Features:
+1. Equipment Booking:
+Browse through our extensive inventory of sports equipment and easily book items for rent. Whether you need basketballs, footballs, tennis rackets, or any other gear, our platform ensures you have access to the tools you need to excel in your chosen sport.
+
+2. Facility Exploration:
+Discover the state-of-the-art facilities available at our college. From well-maintained courts to spacious fields, our facilities are designed to support athletes in their training and competitions. Explore our facilities section to learn more about what we offer.
+
+3. Scores and Achievements:
+Stay updated with the latest scores and achievements of our college's sports teams. Whether it's a thrilling victory or a record-breaking performance, our platform keeps you informed about all the exciting moments in our sporting journey.
+
+4. Beautiful Homepage:
+Our homepage is designed to captivate and engage users from the moment they arrive. With visually appealing graphics, intuitive navigation, and easy access to key features, our homepage sets the tone for an enjoyable experience on our platform.
 
 ##Home Page
 ![image](https://github.com/harshitbh92/Sports-Software/assets/96971543/74ccffd2-c6a7-4bef-b610-5f35863ea161)
