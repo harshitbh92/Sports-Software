@@ -1,45 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Nav from "./components/Nav";
-import Home from './components/Home';
+import Home from "./components/Home";
 import Aboutus from "./components/Aboutus";
-import Facilities from './components/Facilities';
-import Faculty from './components/Faculty';
-import Achievements from './components/Achieve';
+import Facilities from "./components/Facilities";
+import Faculty from "./components/Faculty";
+import Achievements from "./components/Achieve";
 import Profile from "./components/Profile";
 import Dashboard from "./components/dashboard";
 import Dashboard2 from "./components/dashboard2";
 import Footer from "./components/Footer";
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Events from "./components/Events";
 import Contactus from "./components/Contactus";
 import Details from "./components/Details";
 import Topbar from "./components/Topbar";
+import "./App.css";
 
 function App() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/v1/users')
-      .then(response => {
+    axios
+      .get("/api/v1/users")
+      .then((response) => {
         setUsers(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }, []);
 
-
   return (
     <div className="App">
-
       {/* 
 <Router>
 <Routes>
@@ -85,13 +81,12 @@ function App() {
     </Router>
      */}
 
-
-
       <Router>
         <Routes>
           <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path="/dashboard2" element={<Dashboard2 />} />
-          <Route exact
+          <Route
+            exact
             path="/"
             element={
               <>
@@ -109,7 +104,8 @@ function App() {
           />
 
           <Route
-            exact path="/about-us"
+            exact
+            path="/about-us"
             element={
               <>
                 <Topbar />
@@ -125,9 +121,9 @@ function App() {
             }
           />
 
-
           <Route
-            exact path="/facilities"
+            exact
+            path="/facilities"
             element={
               <>
                 <Topbar />
@@ -144,7 +140,8 @@ function App() {
           />
 
           <Route
-            exact path="/faculty"
+            exact
+            path="/faculty"
             element={
               <>
                 <Topbar />
@@ -160,9 +157,9 @@ function App() {
             }
           />
 
-
           <Route
-            exact path="/achievements"
+            exact
+            path="/achievements"
             element={
               <>
                 <Topbar />
@@ -179,7 +176,8 @@ function App() {
           />
 
           <Route
-            exact path="/events"
+            exact
+            path="/events"
             element={
               <>
                 <Topbar />
@@ -195,10 +193,9 @@ function App() {
             }
           />
 
-
-
           <Route
-            exact path="/profile"
+            exact
+            path="/profile"
             element={
               <>
                 <Topbar />
@@ -214,9 +211,9 @@ function App() {
             }
           />
 
-
           <Route
-            exact path="/login"
+            exact
+            path="/login"
             element={
               <>
                 <Topbar />
@@ -233,7 +230,8 @@ function App() {
           />
 
           <Route
-            exact path="/register"
+            exact
+            path="/register"
             element={
               <>
                 <Topbar />
@@ -250,7 +248,8 @@ function App() {
           />
 
           <Route
-            exact path="/contact-us"
+            exact
+            path="/contact-us"
             element={
               <>
                 <Topbar />
@@ -265,14 +264,9 @@ function App() {
               </>
             }
           />
-
         </Routes>
       </Router>
-
-
-
     </div>
   );
-
 }
 export default App;
