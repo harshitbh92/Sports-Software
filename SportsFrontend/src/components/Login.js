@@ -1,4 +1,4 @@
-// // 
+// //
 // import { useState } from "react";
 // import "./CSS/Login.css";
 // import { Link } from "react-router-dom";
@@ -88,15 +88,15 @@
 // Login.js
 
 import { useState } from "react";
-import "./CSS/Login.css"
-import { Link, useNavigate } from 'react-router-dom';
+import "./CSS/Login.css";
+import { Link, useNavigate } from "react-router-dom";
 import { signIn } from "../services/auth";
-import axios from 'axios';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
+import axios from "axios";
+import { useFormik } from "formik";
+import * as yup from "yup";
 import { toast } from "react-toastify";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const loginSchema = yup.object({
   email: yup.string().email("Valid email must be provided"),
@@ -105,11 +105,10 @@ const loginSchema = yup.object({
 });
 
 const initialValues = {
-  email: '',
-  rollNo: '',
-  password: '',
-}
-
+  email: "",
+  rollNo: "",
+  password: "",
+};
 
 function Login() {
   // const [email, setEmail] = useState("");
@@ -145,12 +144,11 @@ function Login() {
   //       console.log(userExists);
   //       if (userExists) {
   //         window.location.href = "/dashboard";
-             
+
   //       } else {
   //         setError("User does not exist");
   //       }
 
-        
   //     } catch (error) {
   //       setError(error.message);
   //     }
@@ -162,14 +160,15 @@ function Login() {
     initialValues,
     validationSchema: loginSchema,
     onSubmit: (values) => {
-      axios.post('http://localhost:5000/api/user/login', values)
-        .then(result => {
-          console.log(result)
+      axios
+        .post("http://localhost:5000/api/user/login", values)
+        .then((result) => {
+          console.log(result);
           toast.info("User Logged In Successfully!!");
-          
-          navigate('/dashboard')
+
+          navigate("/dashboard");
         })
-        .catch(error => console.log(error))
+        .catch((error) => console.log(error));
     },
   });
 
@@ -265,4 +264,3 @@ function Login() {
 }
 
 export default Login;
-
