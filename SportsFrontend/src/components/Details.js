@@ -108,8 +108,6 @@ export default function Details() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
       <div class="col-md-6">
         <form>
           <div class="mb-3">
@@ -127,9 +125,8 @@ export default function Details() {
           <button id='details-submit' type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
-=======
+
       </section>
->>>>>>> b28c80b5361cd67d8568391d2745c9097e745f82
     </div>
   );
 }

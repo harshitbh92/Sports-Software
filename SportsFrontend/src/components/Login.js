@@ -98,6 +98,19 @@ import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+<ToastContainer
+  position="top-right"
+  autoClose={5000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  theme="light"
+/>;
+
 const loginSchema = yup.object({
   email: yup.string().email("Valid email must be provided"),
   rollNo: yup.string(),
@@ -164,16 +177,28 @@ function Login() {
         .post("http://localhost:5000/api/user/login", values)
         .then((result) => {
           console.log(result);
-          toast.info("User Logged In Successfully!!");
+          toast.success("User Logged In Successfully!!");
+          localStorage.setItem("thapar_token",result.data.token)
 
-          navigate("/dashboard");
+          setTimeout(()=>{
+
+            navigate("/dashboard");
+
+          },2000);
+
+        }).catch((error) => {
+          toast.error(error.message || "An error occurred");
+          console.error(error);
         })
-        .catch((error) => console.log(error));
-    },
+
+
+
+          },
   });
 
   return (
     <div>
+      
       <form className="login-form" onSubmit={formik.handleSubmit}>
         <h3>Login</h3>
         <input
@@ -195,7 +220,7 @@ function Login() {
 
         <input
           className="form-control"
-          type="number"
+          type="text"
           id="rollNo"
           name="rollNo"
           placeholder="Roll No"

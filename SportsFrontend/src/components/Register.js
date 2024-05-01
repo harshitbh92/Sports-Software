@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -11,16 +10,6 @@ import * as yup from 'yup';
 import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-=======
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./CSS/Login.css";
-import axios from "axios";
-import { useFormik } from "formik";
-import * as yup from "yup";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
->>>>>>> b28c80b5361cd67d8568391d2745c9097e745f82
 
 <ToastContainer
   position="top-right"
@@ -73,7 +62,6 @@ function Register() {
         .then((result) => {
           console.log(result);
           toast.success("User Registered Successfully!!");
-
           setTimeout(() => {
             navigate("/login");
           }, 2000);
@@ -119,7 +107,7 @@ function Register() {
         </div>
         <input
           className="form-control"
-          type="number"
+          type="text"
           name="rollNo"
           id="rollNo"
           placeholder="Roll No"
@@ -132,7 +120,7 @@ function Register() {
         </div>
         <input
           className="form-control"
-          type="tel"
+          type="text"
           id="phoneNumber"
           name="phoneNumber"
           placeholder="Phone Number"

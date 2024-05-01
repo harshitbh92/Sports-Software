@@ -19,6 +19,7 @@ import Contactus from "./components/Contactus";
 import Details from "./components/Details";
 import Topbar from "./components/Topbar";
 import "./App.css";
+import OrderDetails from "./components/OrderDetail";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -257,6 +258,24 @@ function App() {
                 <main>
                   <Routes>
                     <Route exact path="/" element={<Contactus />} />
+                  </Routes>
+                </main>
+                <Details />
+                <Footer />
+              </>
+            }
+          />
+
+<Route
+            exact
+            path="/issued"
+            element={
+              <>
+                <Topbar />
+                <Nav />
+                <main>
+                  <Routes>
+                    <Route exact path="/" element={<OrderDetails />} />
                   </Routes>
                 </main>
                 <Details />
