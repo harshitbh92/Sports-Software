@@ -1,11 +1,4 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./CSS/Login.css";
-import axios from "axios";
-import { useFormik } from "formik";
-import * as yup from "yup";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { signUp } from '../services/auth';
@@ -114,7 +107,7 @@ function Register() {
           className="form-control"
           type="number"
           name="rollNo"
-          id="rollno"
+          id="rollNo"
           placeholder="Roll No"
           value={formik.values.rollNo}
           onChange={formik.handleChange("rollNo")}
@@ -126,7 +119,7 @@ function Register() {
         <input
           className="form-control"
           type="tel"
-          id="phonenumber"
+          id="phoneNumber"
           name="phoneNumber"
           placeholder="Phone Number"
           value={formik.values.phoneNumber}
@@ -155,9 +148,9 @@ function Register() {
           <input
             className="form-control"
             type="password"
-            id="confirmpassword"
+            id="confirmPassword"
             name="confirmPassword"
-            placeholder="Password"
+            placeholder="Confirm Password"
             value={formik.values.confirmPassword}
             onChange={formik.handleChange("confirmPassword")}
             onBlur={formik.handleBlur("confirmPassword")}

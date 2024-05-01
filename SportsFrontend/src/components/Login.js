@@ -197,7 +197,8 @@ function Login() {
         <input
           className="form-control"
           type="number"
-          name="rollno"
+          id="rollNo"
+          name="rollNo"
           placeholder="Roll No"
           value={formik.values.rollNo}
           onChange={formik.handleChange("rollNo")}
@@ -249,7 +250,7 @@ function Login() {
           />
           <label htmlFor="show-password">Show password</label>
         </div> */}
-        <button id="submit">Login</button>
+        <button id="login-submit">Login</button>
         {/* {error && <p className="error">{error}</p>} */}
         <p>
           Create a new account{" "}

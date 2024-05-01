@@ -21,12 +21,12 @@ export default function Details() {
             <input type="email" class="form-control" id="email" placeholder="Your Email" required/>
           </div>
           <div class="mb-3">
-            <input type="tel" class="form-control" id="phone" placeholder="Your Phone" required/>
+            <input type="tel" class="form-control" id="phoneNumber" placeholder="Your Phone" required/>
           </div>
           <div class="mb-3">
             <textarea class="form-control" id="message" rows="3" placeholder="Your Message" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button id='details-submit' type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>
