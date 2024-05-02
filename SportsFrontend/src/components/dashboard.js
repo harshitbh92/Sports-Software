@@ -187,6 +187,7 @@ const handleSwimmingPoolFormSubmit = () => {
                                           <div className="form-group">
                                               <label className="labels">First Name</label>
                                               <input
+                                              id='first-name'
                                                 type="text"
                                                 className="form-control"
                                                 placeholder="First name"
@@ -199,6 +200,7 @@ const handleSwimmingPoolFormSubmit = () => {
                                           <div className="form-group">
                                               <label className="labels">Last Name</label>
                                               <input
+                                              id='last-name'
                                                 type="text"
                                                 className="form-control"
                                                 required
@@ -211,6 +213,7 @@ const handleSwimmingPoolFormSubmit = () => {
                                           <div className="form-group">
                                               <label className="labels">Email</label>
                                               <input
+                                              id='email'
                                                 type="email"
                                                 className="form-control"
                                                 required
@@ -223,6 +226,7 @@ const handleSwimmingPoolFormSubmit = () => {
                                           <div className="form-group">
                                               <label className="labels">Phone Number</label>
                                               <input
+                                              id='phoneNo'
                                                 type="text"
                                                 className="form-control"
                                                 required
@@ -235,6 +239,7 @@ const handleSwimmingPoolFormSubmit = () => {
                                           <div className="form-group">
                                               <label className="labels">Education Stream</label>
                                               <input
+                                              id='education'
                                                 type="text"
                                                 className="form-control"
                                                 required
@@ -250,6 +255,7 @@ const handleSwimmingPoolFormSubmit = () => {
                               <div className="row mt-3">
                                   <div className="mt-5 text-center">
                                       <button
+                                      id='swim-btn'
                                         className="btn btn-primary profile-button"
                                         type="button"
                                         onClick={handleSwimmingPoolFormSubmit}
@@ -268,7 +274,7 @@ const handleSwimmingPoolFormSubmit = () => {
                               <div className="row">
                                   <div className="col-md-6 border-right">
                                       <div className="p-3 py-5">
-                                          <h4 className="text-right mb-3"><b>Please fill the form</b></h4>
+                                          <h4 id='plzform' className="text-right mb-3"><b>Please fill the form</b></h4>
                                           <div className="form-group">
                                               <label className="labels">Select an equipment to issue:</label>
                                               <select
@@ -288,6 +294,7 @@ const handleSwimmingPoolFormSubmit = () => {
                                           <div className="form-group">
                                               <label className="labels">Enter your name:</label>
                                               <input
+                                              id='equip-name'
                                                 type="text"
                                                 className="form-control"
                                                 required
@@ -303,6 +310,7 @@ const handleSwimmingPoolFormSubmit = () => {
                               <div className="row mt-3">
                                   <div className="mt-5 text-center">
                                       <button
+                                      id='equip-btn'
                                         className="btn btn-primary profile-button"
                                         type="button"
                                         onClick={handleEquipmentFormSubmit}

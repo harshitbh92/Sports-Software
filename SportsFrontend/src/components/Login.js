@@ -178,6 +178,8 @@ function Login() {
         .then((result) => {
           console.log(result);
           toast.success("User Logged In Successfully!!");
+          localStorage.setItem("User_Name",result.data.name);
+          localStorage.setItem("User_Email",result.data.email);
           localStorage.setItem("thapar_token",result.data.token)
 
           setTimeout(()=>{

@@ -1,6 +1,24 @@
 import React from "react";
 import contact from "../img/contact.webp";
 import "./CSS/Contactus.css";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useFormik } from "formik";
+import * as yup from "yup";
+
+<ToastContainer
+  position="top-right"
+  autoClose={5000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  theme="light"
+/>;
 
 export default function Contactus() {
   return (
@@ -10,8 +28,8 @@ export default function Contactus() {
         <div className="centered">Contact us</div>
       </div>
 
-      <div className="contactus">
-        <h1>Contact Us</h1>
+      <div id='contact-form-a' className="contactus">
+        <h1  >Contact Us</h1>
         <form>
           <label for="name">Name:</label>
           <input

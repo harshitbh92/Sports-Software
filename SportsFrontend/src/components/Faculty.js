@@ -36,10 +36,10 @@ export default function Faculty() {
         <div className="col" id="fcard">
             <div className="card" id="facultycards">
                 <img src={coachi} className="card-img-top" alt="..."/>
-                <div className="card-body" id="Facultycardbody">
-                    <h5 className="card-title">Coach Name1</h5>
+                <div className="card-body" id="Facultycardbody1">
+                    <h5 id='coach-title' className="card-title">Coach Name1</h5>
                     <p className="card-text">Sports which he engages to...</p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1" className="btn btn-primary">See
+                    <a id='modal-1-faculty' href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1" className="btn btn-primary">See
                         more</a>
                 </div>
             </div>
@@ -126,7 +126,7 @@ export default function Faculty() {
         <div className="modal-content">
             <div className="modal-header">
                 <h2 className="modal-title fs-5" id="exampleModalLabel">Ccach Name-1</h2>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button  type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
                 <div className="row">
@@ -142,7 +142,7 @@ export default function Faculty() {
                 </div>
 
                 <div className="modal-footer">
-                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id='modal-close-btn' type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

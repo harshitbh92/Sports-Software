@@ -108,7 +108,7 @@ export default function Details() {
             </div>
           </div>
         </div>
-      <div class="col-md-6">
+      {/* <div class="col-md-6">
         <form>
           <div class="mb-3">
             <input type="text" class="form-control" id="name" placeholder="Your Name" required/>
@@ -124,7 +124,7 @@ export default function Details() {
           </div>
           <button id='details-submit' type="submit" class="btn btn-primary">Submit</button>
         </form>
-      </div>
+      </div> */}
 
       </section>
     </div>
